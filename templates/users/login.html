@@ -1,0 +1,29 @@
+
+{% extends "users/base.html" %}
+{% block head_content %}
+<title>Ingresar | Crear cuenta s3</title>
+{% endblock%}
+
+{% block container %}
+
+    {% if error %}
+    <div class="alert alert-danger" role="alert">
+     {{ error }}
+     </div>
+    {% endif%}
+
+    <form method="POST" action="{% url "users:login" %}">
+        {% csrf_token %}
+     <div class="form-group">
+      <input type="text" class="form-control" id="usuario" aria-describedby="usuarioHelp" placeholder="Usuario" name="username"><br>
+      <input type="password" class="form-control" id="password" aria-describedby="passwordoHelp" placeholder="Password" name="password">
+      <center><a href="">Crear Cuenta</a></center><br>
+     <center>
+       <button type="submit" class="btn btn-primary">Ingresar</button>
+       
+     </center>      
+    </div>  
+    </form>
+
+{% endblock %}
+

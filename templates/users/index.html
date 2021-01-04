@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block head_content %}
+<title>Bienvenid@ a ManageS3</title>
+{% endblock %}
+{% load static %}
+{% block container %}
+
+<section class="py-4 bg-tertiary text-white">
+  <div class="container">
+    <div class="row mb-9-dgd mb-md-10-dgd">
+      <div class="col-md-6">
+        <header class="mb-4">
+          <h1 style="color: black;">¿Que deseas hacer hoy?</h1>
+        </header>
+        <div class="text-reset-all m-0-last-all" style="color: black;"><p>Digitaliza tus servicios institucionales con SIMPLE</p>
+        </div>
+
+      </div>
+      
+      <div class="col-md-6 d-none d-md-block order-last"><p><br><img src="{% static "img/logo_simple.png" %}"></p>
+      </div>
+    </div>
+    <div class="text-center"><a href="https://dgd-sitios-simple-dev.do.magnet.cl/" class="text-decoration-none text-white"><span aria-hidden="true" class="cl cl-m-arrow-down cl-2x align-middle mr-3-dgd"></span><span class="text-underline">Ver funcionalidades</span></a>
+    </div>
+  </div>
+</section>
+
+    <hr>
+    <div class="container mb-5">
+      <div class="row">
+        <div class="col-sm-4"><div class="small-card text-black mt-5"><a href="https://dgd-sitios-simple-dev.do.magnet.cl/biblioteca/manuales/" target="_self" class="d-none d-sm-inline"><img src="https://cms-simple-dev.s3-us-west-2.amazonaws.com/uploads/filer_public_thumbnails/filer_public/f1/d8/f1d8b863-893c-43a4-85ce-5cae930e5ea5/ilus_funcion1.png__130x130_height-130_subsampling-2_upscale_width-130.png" alt="Modela Procesos de baja complejidad" loading="lazy"></a>
+      <h3>Modelar Procesos</h3>
+      <p></p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa..</p><p></p><a href="https://dgd-sitios-simple-dev.do.magnet.cl/biblioteca/manuales/" target="_self" class="btn btn-primary">Ir al BPMN
+    </a>
+    </div>
+    
+        </div>
+        <div class="col-sm-4"><div class="small-card text-black mt-5"><a href="https://git.gob.cl/simple/simple/wikis/home" target="_blank" class="d-none d-sm-inline"><img src="https://cms-simple-dev.s3-us-west-2.amazonaws.com/uploads/filer_public_thumbnails/filer_public/f1/d8/f1d8b863-893c-43a4-85ce-5cae930e5ea5/ilus_funcion1.png__130x130_height-130_subsampling-2_upscale_width-130.png" alt="Incorpora FirmaGob y ClaveÚnica" loading="lazy"></a>
+      <h3>Historial Trámites</h3>
+      <p></p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa..</p><p></p><a href="https://git.gob.cl/simple/simple/wikis/home" target="_blank" class="btn btn-primary">Ir a Gestion
+    </a>
+    </div>
+    
+        </div>
+        <div class="col-sm-4"><div class="small-card text-black mt-5"><a href="https://git.gob.cl/simple/simple/wikis/home" target="_blank" class="d-none d-sm-inline"><img src="https://cms-simple-dev.s3-us-west-2.amazonaws.com/uploads/filer_public_thumbnails/filer_public/f1/d8/f1d8b863-893c-43a4-85ce-5cae930e5ea5/ilus_funcion1.png__130x130_height-130_subsampling-2_upscale_width-130.png" alt="Permite integración con Web Service y API's" loading="lazy"></a>
+      <h3>Realizar Trámite</h3>
+      <p></p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p><p></p><a href="https://git.gob.cl/simple/simple/wikis/home" target="_blank" class="btn btn-primary">Ir a bandejas
+    </a>
+    </div>
+    
+        </div>
+      </div>
+    </div>
+
+   
+
+{% endblock %}
