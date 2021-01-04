@@ -1,5 +1,5 @@
 from django.conf.urls import url, include
-from simpleDos.models import Cuenta, Accion, Acontecimiento,CuentaHasConfig
+from simpleDos.models import Cuenta,Accion, Proceso
 from rest_framework import routers, serializers, viewsets
 
 
@@ -21,9 +21,23 @@ class CuentaViewSet(viewsets.ModelViewSet):
 class AccionSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Accion
-        fields = ('nombre', 'tipo', 'extra', 'proceso', 'exponer_variable')
+        fields = ('nombre', 'tipo', 'extra', 'proceso', 'exponer_variable')   
 
 
-# Routers provide an easy way of automatically determining the URL conf.
-router = routers.DefaultRouter()
-router.register(r'cuenta', CuentaViewSet)
+# ViewSets define the view behavior.
+class AccionViewSet(viewsets.ModelViewSet):
+    queryset = Accion.objects.all()
+    serializer_class = AccionSerializer
+
+
+class ProcesoSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Proceso
+        fields = ('nombre', 'descripcion', 'url_informativa','usuario_id','created_at','updated_at', 'width', 'height','cuenta','proc_cont','activo','categoria_id','destacado','icon_ref','version','root','estado','concurrente','eliminar_tramites','ocultar_front', 'ficha_informativa','ficha_titulo','ficha_contenido')  
+
+
+# ViewSets define the view behavior.
+class ProcesoViewSet(viewsets.ModelViewSet):
+    queryset = Proceso.objects.all()
+    serializer_class = ProcesoSerializer
+
